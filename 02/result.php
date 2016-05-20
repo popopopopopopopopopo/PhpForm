@@ -1,6 +1,8 @@
-<?php
 
+<?php
+echo "<header align='center'>";
 echo "お問合せ完了<br>";
+echo "<table boder='0' width='100'>";
 echo "姓名";
 if(is_numeric($_POST["sei"]) == false && is_numeric($_POST["mei"]) == false){
     echo "入力しなおしてください.<br>";
