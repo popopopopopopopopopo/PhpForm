@@ -1,0 +1,35 @@
+
+header{
+    text-align: center;
+    background-color: #F0F8FF;
+    padding: 1em;
+}
+form{
+    float: center;
+    margin: auto;
+    border: 3px;
+    padding: 2em 5em;
+    background: #F0F8FF;}
+table{
+    border: 0;
+    align :center;
+    border-color: gray;
+    width: 150;
+    height: 50%;
+    border-top: none;
+    border-bottom: none;
+    }
+footer{
+    background-color: #F0F8FF;
+    padding: 0 200%;
+    margin: 0 -200%;
+}
+div{
+    display: block;
+}
+textarea{
+    text-align: left;;
+}
+div:active{
+    background: red;
+}
