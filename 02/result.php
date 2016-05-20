@@ -49,11 +49,11 @@ else{
 }
 //どこで知ったか
 echo "どこで知ったか";
-if(isset($_POST["know"]) == false){
+/*if(isset($_POST["know"]) == false){
     echo "チェックしなおしてください<br>";
-}
+}*/
 //$know =$_POST["know"];
-elseif(isset($_POST["know"][0])){
+if(isset($_POST["know"][0])){
     echo "雑誌<br>";
 }
 elseif(isset($_POST["know"][1])){
