@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html>
 <header>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -7,11 +6,11 @@
     <h1>お問合せ完了</h1>
 </header>
 <body>
-    <table align="center">
+    <table align="center" border="1" rules="all" frame="void">
         <div><tr>
             <td>姓名</td>
             <td><?php
-                if(is_numeric($_POST["sei"])   && is_numeric($_POST["mei"]) ){
+                if(is_numeric($_POST["sei"]) && is_numeric($_POST["mei"]) ){
                     echo "入力しなおしてください.<br>";
                 }else{
                     echo $_POST['sei']." ".$_POST['mei']."<br>";
@@ -94,7 +93,7 @@
         </tr></div>
 
         <div><tr>
-            <td>質問内容</td>
+            <td>質問内容</td><td></td>
         </tr>
         <tr>
             <td colspan="2">
@@ -102,4 +101,5 @@
             </td>
         </tr></div>
     </table>
+</body>
 </html>

@@ -6,21 +6,21 @@ header{
 }
 body{
     background-color: #F0F8FF;
-}
-form{
     float: center;
     margin: auto;
     border: 3px;
     padding: 2em 5em;
-    background: #F0F8FF;}
+}
 table{
-    border: 1;
-    column-rule-style: solid;
-    column-rule-color: red;
-    width: 150;
-    height: 50%;
-
+    border: hidden;
+    width: auto;
+    height: 60%;
     }
+tr,td{
+    border :1px dotted #aaa;
+    width: 200;
+
+}
 footer{
     background-color: #F0F8FF;
     padding: 0 200%;
@@ -31,7 +31,4 @@ div{
 }
 textarea{
     text-align: left;;
-}
-div:active{
-    background: red;
 }

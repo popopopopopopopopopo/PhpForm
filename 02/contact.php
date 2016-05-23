@@ -7,21 +7,21 @@
 <body>
 <form action="result.php" method="POST">
 
-    <table align="center" column-rule-style=>
+    <table align="center" border="1" rules="all" frame="void">
 
-        <div #sei>
+        <div >
             <tr><td>姓</td>
             <td><input  type="text" name="sei" size="15" maxlength="40" class="input-text" ></td>
             </tr>
         </div>
 
-        <div #mei>
+        <div >
             <tr><td>名</td>
             <td><input  type="textbox" name="mei" size="15" maxlength="40" class="input-text" ></td>
             </tr>
         </div>
 
-        <div #gen>
+        <div >
             <tr><td>性別</td>
             <td><input id="rd1" type="radio" name="gender" value="g1">
             <label for="rd1">男性</label>
@@ -32,13 +32,13 @@
             </tr>
         </div>
 
-        <div #res>
+        <div >
             <tr><td>住所</td>
             <td><input type="textbox" name="residence" size="40"></td>
             </tr>
         </div>
 
-        <div #tel>
+        <div >
             <tr><td>電話番号</td>
             <td><input type="textbox" OnKeyPress="onlyNumeric()" name="tel1" size="3" maxlength="4" >-
             <input type="textbox" OnKeyPress="onlyNumeric()" name="tel2" size="3" maxlength="3" >-
@@ -46,13 +46,13 @@
             </tr>
         </div>
 
-        <div #ad>
+        <div >
             <tr><td>アドレス</td>
             <td><input type="textbox" name="ad1" size="24">@<input type="textbox" name="ad2" size="10"></td>
             </tr>
         </div>
 
-        <div #know>
+        <div >
             <tr><td>どこで知ったか</td>
             <td><input id="ch1" type="checkbox" name="know[]" value="k1">
             <label for="ch1">雑誌</label>
@@ -65,7 +65,7 @@
             </tr>
         </div>
 
-        <div #question>
+        <div >
             <tr><td>質問のカテゴリ</td>
             <td><select name="category">
             <option >選択してください</option>
@@ -76,7 +76,7 @@
             </tr>
         </div>
 
-        <div #question2>
+        <div >
             <tr>
             <td>質問内容</td></tr><br>
 
@@ -87,8 +87,8 @@
         </div>
     </table>
 <div align="center">
-    <input type="reset" size="10" align="center">
-    <input type="submit" size="10" align="center">
+    <input type="reset" size="15" >
+    <input type="submit" size="15">
 
 </div>
 </body>
