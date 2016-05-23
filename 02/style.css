@@ -1,17 +1,13 @@
-
 header{
     text-align: center;
-    background-color: #F0F8FF;
+    background-image: url("p-pt_0238-l_pt_02383.jpg");
     padding: 1em;
     border-bottom:solid 2px blue;
-    color: #4169e1;
-    text-shadow:2px 2px 1px #0000ff;
-}
-span{
-
+    color: #248;
+    text-shadow:2px 2px 1px #4169e1;
 }
 body{
-    background-color: #F0F8FF;
+    background-color: #e6eeff;
      float: center;
     margin: auto;
     border: 3px;
@@ -22,26 +18,21 @@ table{
     width: 50em;
     height: 60%;
     }
-th{
-
-}
 tr,td{
     border :1px dotted blue;
     width: 200;
-}
-footer{
-    background-color: #F0F8FF;
-    padding: 0 200%;
-    margin: 0 -200%;
-}
-div{
-    display: block;
 }
 textarea{
     text-align: left;
     align : center;
     width: 80%;
 }
-div.submit{
-    width: 100%;
+input#submit,#reset{
+    width: 100px;
+    height: 50px;
+    background-color: #248;
+    color: #fff;
+    border-style: none;
+    font-weight: bold;
+    border-radius: 5px
 }

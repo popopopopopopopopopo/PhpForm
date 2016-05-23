@@ -11,11 +11,8 @@
         <div><tr>
             <td>姓名</td>
             <td><?php
-                if(empty($_POST["sei"]) && empty($_POST["mei"]) ){
-                    echo "入力しなおしてください.<br>";
-                }else{
-                    echo $_POST['sei']." ".$_POST['mei']."<br>";
-                } ?>
+                echo $_POST['sei']." ".$_POST['mei']."<br>";
+                ?>
             </td>
         </tr></div>
 
@@ -37,11 +34,8 @@
         <div><tr>
             <td>住所</td>
             <td><?php
-                if(empty($_POST["residence"])){
-                    echo "入力しなおしてください.<br>";
-                }else{
-                    echo $_POST['residence']."<br>";
-                } ?>
+                echo $_POST['residence']."<br>";
+                ?>
             </td>
         </tr></div>
 
@@ -61,12 +55,8 @@
         <div><tr>
             <td>アドレス</td>
             <td><?php
-                if(empty($_POST["ad1"])  && empty($_POST["ad2"])){
-                    echo "入力しなおしてください.<br>";
-                }
-                else{
-                    echo $_POST['ad1']."@".$_POST['ad2']."<br>";
-                } ?>
+                echo $_POST['ad1']."@".$_POST['ad2']."<br>";
+                ?>
             </td>
         </tr></div>
 
