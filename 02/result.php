@@ -7,10 +7,11 @@
 </header>
 <body>
     <table align="center" border="1" rules="all" frame="void">
+
         <div><tr>
             <td>姓名</td>
             <td><?php
-                if(is_numeric($_POST["sei"]) && is_numeric($_POST["mei"]) ){
+                if(empty($_POST["sei"]) && empty($_POST["mei"]) ){
                     echo "入力しなおしてください.<br>";
                 }else{
                     echo $_POST['sei']." ".$_POST['mei']."<br>";
@@ -36,7 +37,7 @@
         <div><tr>
             <td>住所</td>
             <td><?php
-                if(is_numeric($_POST["residence"])){
+                if(empty($_POST["residence"])){
                     echo "入力しなおしてください.<br>";
                 }else{
                     echo $_POST['residence']."<br>";
@@ -60,7 +61,7 @@
         <div><tr>
             <td>アドレス</td>
             <td><?php
-                if(is_numeric($_POST["ad1"])  && is_numeric($_POST["ad2"])){
+                if(empty($_POST["ad1"])  && empty($_POST["ad2"])){
                     echo "入力しなおしてください.<br>";
                 }
                 else{

@@ -78,17 +78,17 @@
 
         <div >
             <tr>
-            <td>質問内容</td></tr><br>
+            <td>質問内容</td>
+            </tr><br>
 
             <tr><td colspan="2">
-            <textarea  name="coments" align="center" cols="58" rows="5">
-
-        </textarea></td></tr><br>
+            <textarea  name="coments" align="center" col="50" rows="5">
+            </textarea></td></tr><br>
         </div>
     </table>
 <div align="center">
-    <input type="reset" size="15" >
-    <input type="submit" size="15">
+    <input type="reset" >
+    <input type="submit" >
 
 </div>
 </body>
