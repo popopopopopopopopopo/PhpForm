@@ -3,10 +3,16 @@ header{
     text-align: center;
     background-color: #F0F8FF;
     padding: 1em;
+    border-bottom:solid 2px blue;
+    color: #4169e1;
+    text-shadow:2px 2px 1px #0000ff;
+}
+span{
+
 }
 body{
     background-color: #F0F8FF;
-    float: center;
+     float: center;
     margin: auto;
     border: 3px;
     padding: 2em 5em;
@@ -20,7 +26,7 @@ th{
 
 }
 tr,td{
-    border :1px dotted #aaa;
+    border :1px dotted blue;
     width: 200;
 }
 footer{
@@ -35,5 +41,7 @@ textarea{
     text-align: left;
     align : center;
     width: 80%;
-
+}
+div.submit{
+    width: 100%;
 }

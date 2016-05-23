@@ -1,7 +1,7 @@
 <header>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>お問合せ</title>
-    <h1>お問合せ</h1>
+    <h1>□<span>お問合せ</span>□</h1>
 </header>
 
 <body>
@@ -86,7 +86,7 @@
             </textarea></td></tr><br>
         </div>
     </table>
-<div align="center">
+<div #submit align="center">
     <input type="reset" >
     <input type="submit" >
 
