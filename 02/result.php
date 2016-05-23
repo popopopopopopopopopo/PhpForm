@@ -1,90 +1,96 @@
 
-<?php
-echo "<header align='center'>";
-echo "お問合せ完了<br>";
-echo "<table boder='0' width='100'>";
-echo "姓名";
-if(is_numeric($_POST["sei"]) == false && is_numeric($_POST["mei"]) == false){
-    echo "入力しなおしてください.<br>";
-}else{
-    echo $_POST['sei']." ".$_POST['mei']."<br>";
-}
+<html>
+<header>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>お問合せ完了</title>
+    <h1>お問合せ完了</h1>
+</header>
+<body>
+    <table align="center" border="1" rules="all" frame="void">
 
-//性別表示
-echo "性別";
-if(isset($_POST["gender"]) == false){
-    echo "チェックしなおしてください<br>";
-}
-elseif($_POST["gender"] === "g1"){
-    echo "男性<br>";
-}
-elseif($_POST["gender"] === "g2"){
-    echo "女性<br>";
-}
-else{
-    echo "不明<br>";
-}
+        <div><tr>
+            <td>姓名</td>
+            <td><?php
+                echo $_POST['sei']." ".$_POST['mei']."<br>";
+                ?>
+            </td>
+        </tr></div>
 
-echo "住所";
-if(is_numeric($_POST["residence"]) == false){
-    echo "入力しなおしてください.<br>";
-}else{
-    echo $_POST['residence']."<br>";
-}
+        <div><tr>
+            <td>性別</td>
+            <td><?php
+                if(isset($_POST["gender"]) == false){
+                    echo "選択してください<br>";
+                }elseif($_POST["gender"] === "g1"){
+                    echo "男性<br>";
+                }elseif($_POST["gender"] === "g2"){
+                    echo "女性<br>";
+                }else{
+                    echo "不明<br>";
+                } ?>
+            </td>
+        </tr></div>
 
-echo "電話番号";
-if(is_numeric($_POST["tel1"]) == false && is_numeric($_POST["tel2"]) == false){
-    if(is_numeric($_POST["tel2"]) == false && is_numeric($_POST["tel3"]) == false){
-        echo "入力しなおしてください.<br>";
-    }
-}
-else{
-    echo $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3']."<br>";
-}
+        <div><tr>
+            <td>住所</td>
+            <td><?php
+                echo $_POST['residence']."<br>";
+                ?>
+            </td>
+        </tr></div>
 
-echo "アドレス";
-if(is_numeric($_POST["ad1"]) == false && is_numeric($_POST["ad2"]) == false){
-    echo "入力しなおしてください.<br>";
-}
-else{
-    echo $_POST['ad1']."@".$_POST['ad2']."<br>";
-}
-//どこで知ったか
-echo "どこで知ったか";
-/*if(isset($_POST["know"]) == false){
-    echo "チェックしなおしてください<br>";
-}*/
-//$know =$_POST["know"];
-if(isset($_POST["know"][0])){
-    echo "雑誌<br>";
-}
-elseif(isset($_POST["know"][1])){
-    echo "新聞<br>";
-}
-elseif(isset($_POST["know"][2])){
-    echo "テレビ<br>";
-}
-elseif(isset($_POST["know"][3])){
-    echo "その他<br>";
-}
+        <div><tr>
+            <td>電話番号</td>
+            <td><?php
+                if(is_numeric($_POST["tel1"]) == false && is_numeric($_POST["tel2"]) == false){
+                    if(is_numeric($_POST["tel2"]) == false && is_numeric($_POST["tel3"]) == false){
+                        echo "入力しなおしてください.<br>";
+                    }
+                }else{
+                    echo $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3']."<br>";
+                }?>
+            </td>
+        </tr></div>
 
-//質問のカテゴリ
-echo "質問のカテゴリ";
-//$category =$_POST["category"];
-if(isset($_POST["category"][0])){
-    echo "あ <br>";
-}
-elseif(isset($_POST["category"][1])){
-    echo "い <br>";
-}
-elseif(isset($_POST["category"][2])){
-    echo "う <br>";
-}
-elseif(isset($_POST["category"][3])){
-    echo "え <br>";
-}
-elseif(isset($_POST["category"][4])){
-    echo "お <br>";
-}
+        <div><tr>
+            <td>アドレス</td>
+            <td><?php
+                echo $_POST['ad1']."@".$_POST['ad2']."<br>";
+                ?>
+            </td>
+        </tr></div>
 
-echo "質問内容<br>".$_POST['coments']."<br>";
+        <div><tr>
+            <td>どこで知ったのか</td>
+            <td><?php
+                if(empty($_POST["know"])){
+                    echo "選択してください<br>";
+                }else{
+                    $know=$_POST["know"];
+                    $check=array("k1"=>"雑誌","k2"=>"新聞","k3"=>"テレビ","k4"=>"その他");
+                    foreach ($know as $value) {
+                        echo $select_know = $check[$value]." ";
+                    }
+                } ?>
+            </td>
+        </tr></div>
+
+        <div><tr>
+            <td>質問のカテゴリ</td>
+            <td><?php
+            echo "{$_POST['category']}";
+             ?>
+            </td>
+        </tr></div>
+
+        <div><tr>
+            <td>質問内容</td><td></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <?php echo $_POST["coments"]."<br>"; ?>
+            </td>
+        </tr></div>
+    </table>
+</body>
+</html>

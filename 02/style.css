@@ -1,35 +1,38 @@
-
 header{
     text-align: center;
-    background-color: #F0F8FF;
+    background-image: url("p-pt_0238-l_pt_02383.jpg");
     padding: 1em;
+    border-bottom:solid 2px blue;
+    color: #248;
+    text-shadow:2px 2px 1px #4169e1;
 }
-form{
-    float: center;
+body{
+    background-color: #e6eeff;
+     float: center;
     margin: auto;
     border: 3px;
     padding: 2em 5em;
-    background: #F0F8FF;}
-table{
-    border: 0;
-    align :center;
-    border-color: gray;
-    width: 150;
-    height: 50%;
-    border-top: none;
-    border-bottom: none;
-    }
-footer{
-    background-color: #F0F8FF;
-    padding: 0 200%;
-    margin: 0 -200%;
 }
-div{
-    display: block;
+table{
+    border: hidden;
+    width: 50em;
+    height: 60%;
+    }
+tr,td{
+    border :1px dotted blue;
+    width: 200;
 }
 textarea{
-    text-align: left;;
+    text-align: left;
+    align : center;
+    width: 80%;
 }
-div:active{
-    background: red;
+input#submit,#reset{
+    width: 100px;
+    height: 50px;
+    background-color: #248;
+    color: #fff;
+    border-style: none;
+    font-weight: bold;
+    border-radius: 5px
 }
