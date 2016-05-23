@@ -4,6 +4,9 @@ header{
     background-color: #F0F8FF;
     padding: 1em;
 }
+body{
+    background-color: #F0F8FF;
+}
 form{
     float: center;
     margin: auto;

@@ -54,13 +54,13 @@
 
         <div #know>
             <tr><td>どこで知ったか</td>
-            <td><input id="ch1" type="checkbox" name="know" value="know1">
+            <td><input id="ch1" type="checkbox" name="know[]" value="k1">
             <label for="ch1">雑誌</label>
-            <input id="ch2" type="checkbox" name="know" value="know2">
+            <input id="ch2" type="checkbox" name="know[]" value="k2">
             <label for="ch2">新聞</label>
-            <input id="ch3" type="checkbox" name="know" value="know3">
+            <input id="ch3" type="checkbox" name="know[]" value="k3">
             <label for="ch3">テレビ</label>
-            <input id="ch4" type="checkbox" name="know" value="know4">
+            <input id="ch4" type="checkbox" name="know[]" value="k4">
             <label for="ch4">その他</label></td>
             </tr>
         </div>
@@ -68,12 +68,10 @@
         <div #question>
             <tr><td>質問のカテゴリ</td>
             <td><select name="category">
-            <?php
-            $category=array('あ','い','う','え','お');
-            foreach($category as $cat){
-                echo "<option value=\"{$cat}\"> {$cat}</option>";
-            }
-            ?>
+            <option >選択してください</option>
+            <option >質問・お問合せ</option>
+            <option >あああ</option>
+            <option >選択肢のサンプル4</option>
             </select></td>
             </tr>
         </div>
@@ -89,7 +87,9 @@
         </div>
     </table>
 <div align="center">
+    <input type="reset" size="10" align="center">
     <input type="submit" size="10" align="center">
+
 </div>
 </body>
 <footer>
