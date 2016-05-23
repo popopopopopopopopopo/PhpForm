@@ -7,7 +7,7 @@
 <body>
 <form action="result.php" method="POST">
 
-    <table align="center" >
+    <table align="center" column-rule-style=>
 
         <div #sei>
             <tr><td>姓</td>
@@ -71,7 +71,7 @@
             <option >選択してください</option>
             <option >質問・お問合せ</option>
             <option >あああ</option>
-            <option >選択肢のサンプル4</option>
+            <option >その他</option>
             </select></td>
             </tr>
         </div>

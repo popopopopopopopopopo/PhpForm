@@ -14,13 +14,12 @@ form{
     padding: 2em 5em;
     background: #F0F8FF;}
 table{
-    border: 0;
-    align :center;
-    border-color: gray;
+    border: 1;
+    column-rule-style: solid;
+    column-rule-color: red;
     width: 150;
     height: 50%;
-    border-top: none;
-    border-bottom: none;
+
     }
 footer{
     background-color: #F0F8FF;
