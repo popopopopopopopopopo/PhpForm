@@ -19,9 +19,7 @@
         <div><tr>
             <td>性別</td>
             <td><?php
-                if(isset($_POST["gender"]) == false){
-                    echo "選択してください<br>";
-                }elseif($_POST["gender"] === "g1"){
+                if($_POST["gender"] === "g1"){
                     echo "男性<br>";
                 }elseif($_POST["gender"] === "g2"){
                     echo "女性<br>";
@@ -42,13 +40,8 @@
         <div><tr>
             <td>電話番号</td>
             <td><?php
-                if(is_numeric($_POST["tel1"]) == false && is_numeric($_POST["tel2"]) == false){
-                    if(is_numeric($_POST["tel2"]) == false && is_numeric($_POST["tel3"]) == false){
-                        echo "入力しなおしてください.<br>";
-                    }
-                }else{
-                    echo $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3']."<br>";
-                }?>
+                echo $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3']."<br>";
+                ?>
             </td>
         </tr></div>
 

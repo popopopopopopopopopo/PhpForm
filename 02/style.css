@@ -37,3 +37,8 @@ input#submit,#reset{
     font-weight: bold;
     border-radius: 5px
 }
+span{
+    color: red;
+    float: right;
+    box-shadow: 10px 10px　red;
+}
