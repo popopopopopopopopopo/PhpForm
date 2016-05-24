@@ -1,13 +1,13 @@
 header{
     text-align: center;
-    background-image: url("p-pt_0238-l_pt_02383.jpg");
+    background-image: url("ignasi_pattern_s.png");
     padding: 1em;
-    border-bottom:solid 2px blue;
-    color: #248;
-    text-shadow:2px 2px 1px #4169e1;
+    border-bottom:solid 2px gray;
+    color: #2f4f4f;
+    text-shadow:2px 2px 1px gray;
 }
 body{
-    background-color: #e6eeff;
+    background-image: url("ignasi_pattern_s.png");
      float: center;
     margin: auto;
     border: 3px;
@@ -20,7 +20,7 @@ table{
 
     }
 tr,td{
-    border :1px dotted blue;
+    border :1px dotted gray;
     width: 200;
 }
 textarea{
@@ -31,7 +31,7 @@ textarea{
 input#submit,#reset{
     width: 100px;
     height: 50px;
-    background-color: #248;
+    background-color: #2f4f4f;
     color: #fff;
     border-style: none;
     font-weight: bold;
