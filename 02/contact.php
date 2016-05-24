@@ -1,11 +1,11 @@
 <header>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>お問合せ</title>
-    <h1>◇◇◇ お問合せ ◇◇◇</h1>
+    <h1>◇◆◇ お問合せ ◇◆◇</h1>
 </header>
 
 <body>
-<form action="result.php" method="POST">
+<form action="result.php" method="POST" >
 
     <table align="center" border="1" rules="all" frame="void">
 
@@ -40,7 +40,7 @@
 
         <div >
             <tr><td>電話番号<span>(必須)</span></td>
-            <td><input type="textbox" name="tel1" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="例)123"　required="required"　/>-
+            <td><input type="textbox" name="tel1" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="例)123" required />-
             <input type="textbox" name="tel2" size="3" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="456" required />-
             <input type="textbox" name="tel3" size="3" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="789" required /></td>
             </tr>
@@ -48,8 +48,8 @@
 
         <div >
             <tr><td>アドレス<span>(必須)</span></td>
-            <td><input type="textbox" name="ad1" size="24" onKeyup="this.value=this.value.replace(/[^0-9a-z]+/i,'')" placeholder="例)abcde"　required="required" />@
-                <input type="textbox" name="ad2" size="10" onKeyup="this.value=this.value.replace(/[^0-9a-z]+\.[a-z]{2,3}$/,'')" pattern="[a-z0-9.-]+\.[a-z]{2,3}$"　placeholder="example.com" required /></td>
+            <td><input type="textbox" name="ad1" size="24" onKeyup="this.value=this.value.replace(/[^0-9a-z]+/,'')" placeholder="abcd" required />@
+                <input type="textbox" name="ad2" size="10" onKeyup="this.value=this.value.replace(/[^0-9a-z]+\.[a-z]{2,3}$/,'')" pattern="[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="example.com" required /></td>
             </tr>
         </div>
 
@@ -68,7 +68,7 @@
 
         <div >
             <tr><td>お問合せのカテゴリ<span>(必須)</span></td>
-            <td><select name="category" required />
+            <td><select name="category"/>
             <option >選択してください</option>
             <option >質問・お問合せ</option>
             <option >その他</option>

@@ -3,7 +3,7 @@
 <header>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>お問合せ完了</title>
-    <h1>お問合せ完了</h1>
+    <h1>○●○ お問合せ完了 ○●○</h1>
 </header>
 <body>
     <table align="center" border="1" rules="all" frame="void">
