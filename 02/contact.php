@@ -1,7 +1,7 @@
 <header>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>お問合せ</title>
-    <h1>お問合せ</h1>
+    <h1>◇◇◇ お問合せ ◇◇◇</h1>
 </header>
 
 <body>
@@ -23,12 +23,12 @@
 
         <div >
             <tr><td>性別</td>
-            <td><input id="rd1" type="radio" name="gender" value="g1">
-            <label for="rd1">男性</label>
-            <input id="rd2" type="radio" name="gender" value="g2">
-            <label for="rd2">女性</label>
-            <input id="rd3" type="radio" name="gender" value="g3">
-            <label for="rd3">不明</label></td>
+            <td><input id="rd1" type="radio" name="gender"value="g1" required="true">
+            <label for="rd1" class="error">男性</label>
+            <input id="rd2" type="radio" name="gender"value="g2" required="true">
+            <label for="rd2" class="error">女性</label>
+            <input id="rd3" type="radio" name="gender"value="g3" required="true">
+            <label for="rd3" class="error">不明</label></td>
             </tr>
         </div>
 
@@ -54,21 +54,21 @@
         </div>
 
         <div >
-            <tr><td>どこで知ったか</td>
-            <td><input id="ch1" type="checkbox" name="know[]" value="k1">
+            <tr><td>どこでご覧になりましたか</td>
+            <td><input id="ch1" type="checkbox" name="know[]" value="k1" >
             <label for="ch1">雑誌</label>
-            <input id="ch2" type="checkbox" name="know[]" value="k2">
+            <input id="ch2" type="checkbox" name="know[]" value="k2" >
             <label for="ch2">新聞</label>
-            <input id="ch3" type="checkbox" name="know[]" value="k3">
+            <input id="ch3" type="checkbox" name="know[]" value="k3" >
             <label for="ch3">テレビ</label>
-            <input id="ch4" type="checkbox" name="know[]" value="k4">
+            <input id="ch4" type="checkbox" name="know[]" value="k4" >
             <label for="ch4">その他</label></td>
             </tr>
         </div>
 
         <div >
             <tr><td>質問のカテゴリ</td>
-            <td><select name="category">
+            <td><select name="category" required="required">
             <option >選択してください</option>
             <option >質問・お問合せ</option>
             <option >あああ</option>

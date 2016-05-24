@@ -17,6 +17,7 @@ table{
     border: hidden;
     width: 50em;
     height: 60%;
+
     }
 tr,td{
     border :1px dotted blue;
