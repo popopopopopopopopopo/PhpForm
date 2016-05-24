@@ -40,16 +40,16 @@
 
         <div >
             <tr><td>電話番号</td>
-            <td><input type="textbox" OnKeyPress="onlyNumeric()" name="tel1" size="3" maxlength="4" placeholder="例)123"　required />-
-            <input type="textbox" OnKeyPress="onlyNumeric()" name="tel2" size="3" maxlength="3" placeholder="456" required />-
-            <input type="textbox" OnKeyPress="onlyNumeric()" name="tel3" size="3" maxlength="3" placeholder="789" required /></td>
+            <td><input type="textbox" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" name="tel1" size="3" maxlength="4" placeholder="例)123"　required />-
+            <input type="textbox" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" name="tel2" size="3" maxlength="3" placeholder="456" required />-
+            <input type="textbox" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" name="tel3" size="3" maxlength="3" placeholder="789" required /></td>
             </tr>
         </div>
 
         <div >
             <tr><td>アドレス</td>
-            <td><input type="textbox" name="ad1" size="24" placeholder="例)abcde" pattern="^[0-9A-Za-z]+$"　required>@
-                <input type="textbox" name="ad2" size="10" placeholder="example.com" pattern="^[0-9A-Za-z]+$"　required></td>
+            <td><input type="textbox" name="ad1" size="24" placeholder="例)abcde" style="ime-mode:disabled;" pattern="^[0-9A-Za-z]+$"　required>@
+                <input type="textbox" name="ad2" size="10" placeholder="example.com" pattern="[a-z0-9.-]+\.[a-z]{2,3}$"　required></td>
             </tr>
         </div>
 

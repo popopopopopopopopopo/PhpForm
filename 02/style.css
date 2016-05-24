@@ -8,11 +8,11 @@ header{
 }
 body{
     background-image: url("ignasi_pattern_s.png");
-     float: center;
+    float: center;
     margin: auto;
     border: 3px;
     padding: 2em 5em;
-}
+    }
 table{
     border: hidden;
     width: 50em;
