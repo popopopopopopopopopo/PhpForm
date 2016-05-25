@@ -77,11 +77,12 @@
         </tr></div>
 
         <div><tr>
-            <td>質問内容</td><td></td>
+            <td colspan="2">質問内容</td>
         </tr>
         <tr>
-            <td colspan="2">
-                <?php echo $_POST["coments"]."<br>"; ?>
+            <td colspan="2"><fieldset align="center" col="50" >
+                <?php echo nl2br($_POST["coments"])."<br>"; ?>
+                </fieldset>
             </td>
         </tr></div>
     </table>

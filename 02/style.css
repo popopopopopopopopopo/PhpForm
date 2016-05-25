@@ -27,6 +27,7 @@ textarea{
     text-align: left;
     align : center;
     width: 80%;
+    margin: 0 5em;
 }
 input#submit,#reset{
     width: 100px;

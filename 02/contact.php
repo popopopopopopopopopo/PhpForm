@@ -54,7 +54,7 @@
         </div>
 
         <div >
-            <tr><td>どこでご覧になりましたか<span>(必須)</span></td>
+            <tr><td required >どこでご覧になりましたか<span>(必須)</span></td>
             <td><input id="ch1" type="checkbox" name="know[]" value="k1" >
             <label for="ch1">雑誌</label>
             <input id="ch2" type="checkbox" name="know[]" value="k2" >
@@ -78,7 +78,7 @@
 
         <div >
             <tr>
-            <td>お問合せ内容</td>
+            <td colspan="2">お問合せ内容</td>
             </tr><br>
 
             <tr><td colspan="2">
