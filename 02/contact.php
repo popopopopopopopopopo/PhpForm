@@ -41,8 +41,8 @@
         <div >
             <tr><td>電話番号<span>(必須)</span></td>
             <td><input type="textbox" name="tel1" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="例)123" required />-
-            <input type="textbox" name="tel2" size="3" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="456" required />-
-            <input type="textbox" name="tel3" size="3" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="789" required /></td>
+            <input type="textbox" name="tel2" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="456" required />-
+            <input type="textbox" name="tel3" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="789" required /></td>
             </tr>
         </div>
 
@@ -55,20 +55,18 @@
 
         <div >
             <tr><td>どこでご覧になりましたか<span>(必須)</span></td>
-            <td><input id="ch1" type="checkbox" name="know[]" value="k1">
+            <td><input id="ch1" type="checkbox" name="know[]" value="k1" title="いずれか選択してください"　>
             <label for="ch1">雑誌</label>
-            <input id="ch2" type="checkbox" name="know[]" value="k2" >
+            <input id="ch2" type="checkbox" name="know[]" value="k2"　title="いずれか選択してください"　>
             <label for="ch2">新聞</label>
-            <input id="ch3" type="checkbox" name="know[]" value="k3" >
+            <input id="ch3" type="checkbox" name="know[]" value="k3" title="いずれか選択してください" >
             <label for="ch3">テレビ</label>
-            <input id="ch4" type="checkbox" name="know[]" value="k4" >
+            <input id="ch4" type="checkbox" name="know[]" value="k4" title="いずれか選択してください" >
             <label for="ch4">その他</label></td>
             <?php
             if(isset($_POST['know[]'])){
                 echo "選択してください";
-
-            }?>
-            </tr>
+            }?>            </tr>
         </div>
 
         <div >
@@ -77,10 +75,6 @@
             <option value="">選択してください</option>
             <option value="1">質問・お問合せ</option>
             <option value="2">その他</option>
-            <?php
-            if($_POST['category'] !== "checked"){
-                echo "選択してください";
-            }?>
             </select></td>
             </tr>
         </div>
@@ -89,7 +83,6 @@
             <tr>
             <td colspan="2">お問合せ内容</td>
             </tr><br>
-
             <tr><td colspan="2">
             <textarea  name="coments" col="50" rows="5" value="" />
             </textarea></td></tr><br>
