@@ -71,8 +71,14 @@
         <div><tr>
             <td>質問のカテゴリ</td>
             <td><?php
-            echo "{$_POST['category']}";
-             ?>
+                if($_POST["category"] === "1"){
+                    echo "質問・お問合せ<br>";
+                }elseif($_POST["category"] === "2"){
+                    echo "その他<br>";
+                }else{
+                    echo "不明<br>";
+                }
+                ?>
             </td>
         </tr></div>
 
