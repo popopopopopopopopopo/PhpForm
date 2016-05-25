@@ -55,31 +55,30 @@
 
         <div >
             <tr><td>どこでご覧になりましたか<span>(必須)</span></td>
-            <td><input id="ch1" type="checkbox" name="know" value="k1" >
+            <td><input id="ch1" type="checkbox" name="know[]" value="k1">
             <label for="ch1">雑誌</label>
-            <input id="ch2" type="checkbox" name="know" value="k2" >
+            <input id="ch2" type="checkbox" name="know[]" value="k2" >
             <label for="ch2">新聞</label>
-            <input id="ch3" type="checkbox" name="know" value="k3" >
+            <input id="ch3" type="checkbox" name="know[]" value="k3" >
             <label for="ch3">テレビ</label>
-            <input id="ch4" type="checkbox" name="know" value="k4" >
-            <label for="ch4">その他</label>
+            <input id="ch4" type="checkbox" name="know[]" value="k4" >
+            <label for="ch4">その他</label></td>
             <?php
-                require($_POST["know"]);
-             ?>
+            if(isset($_POST['know[]'])){
+                echo "選択してください";
 
-
-        </td>
+            }?>
             </tr>
         </div>
 
         <div >
             <tr><td>お問合せのカテゴリ<span>(必須)</span></td>
-            <td><select name="category"/ required >
+            <td><select name="category" required />
             <option value="">選択してください</option>
             <option value="1">質問・お問合せ</option>
             <option value="2">その他</option>
             <?php
-            if($_POST['category'] == ""){
+            if($_POST['category'] !== "checked"){
                 echo "選択してください";
             }?>
             </select></td>
