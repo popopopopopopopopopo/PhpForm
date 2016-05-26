@@ -5,12 +5,13 @@
 </header>
 
 <body>
-<form action="result.php" method="POST" >
-
+<form action="result.php" method="POST"  autocomplete="off" >
+    <!---テーブルの表：中央寄せ、線の太さ１、巣是手の内羅線、外枠線非表示-->
     <table align="center" border="1" rules="all" frame="void">
 
         <div >
             <tr><td>姓<span>(必須)</span></td>
+            <!--テキストボックス、名前、サイズ、文字数制限、クラス、例、必須入力-------------->
             <td><input  type="text" name="sei" size="15" maxlength="40" class="input-text" placeholder="山田" required /></td>
             </tr>
         </div>
@@ -23,6 +24,7 @@
 
         <div >
             <tr><td>性別<span>(必須)</span></td>
+            <!--id、ラジオボタン、名前、値、必須入力------------>
             <td><input id="rd1" type="radio" name="gender"value="g1" required="true"　/>
             <label for="rd1" class="error">男性</label>
             <input id="rd2" type="radio" name="gender"value="g2" />
@@ -40,6 +42,7 @@
 
         <div >
             <tr><td>電話番号<span>(必須)</span></td>
+            <!--okeyupで入力文字制限(半角数字のみ)--------->
             <td><input type="textbox" name="tel1" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="123" required />-
             <input type="textbox" name="tel2" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="456" required />-
             <input type="textbox" name="tel3" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="789" required /></td>
@@ -55,7 +58,7 @@
 
         <div >
             <tr><td>どこでご知りましたか</td>
-
+            <!--名前に[]をつけることで複数選択可能に---->
             <td><input id="ch1" type="checkbox" name="know[]" value="k1" title="いずれか選択してください"　>
             <label for="ch1">紙面</label>
             <input id="ch2" type="checkbox" name="know[]" value="k2"　title="いずれか選択してください"　>
@@ -64,10 +67,7 @@
             <label for="ch3">テレビ</label>
             <input id="ch4" type="checkbox" name="know[]" value="k4" title="いずれか選択してください" checked="checked">
             <label for="ch4">その他</label></td>
-            <?php
-            if(isset($_POST['know[]'])){
-                echo "選択してください";
-            }?>            </tr>
+            </tr>
         </div>
 
         <div >
@@ -82,10 +82,11 @@
 
         <div >
             <tr>
+            <!---colspan=2で説を結合------->
             <td colspan="2">お問合せ内容</td>
             </tr><br>
             <tr><td colspan="2">
-            <textarea  name="coments" col="50" rows="5"　value="" />
+            <textarea  name="coments" col="50" rows="5"　value="" /><!--colで横幅、rowsｓで縦幅指定------->
             </textarea></td></tr><br>
         </div>
     </table>
