@@ -54,14 +54,15 @@
         </div>
 
         <div >
-            <tr><td>どこでご覧になりましたか<span>(必須)</span></td>
+            <tr><td>どこでご覧になりましたか</td>
+
             <td><input id="ch1" type="checkbox" name="know[]" value="k1" title="いずれか選択してください"　>
-            <label for="ch1">雑誌</label>
+            <label for="ch1">紙面</label>
             <input id="ch2" type="checkbox" name="know[]" value="k2"　title="いずれか選択してください"　>
-            <label for="ch2">新聞</label>
+            <label for="ch2">SNS</label>
             <input id="ch3" type="checkbox" name="know[]" value="k3" title="いずれか選択してください" >
             <label for="ch3">テレビ</label>
-            <input id="ch4" type="checkbox" name="know[]" value="k4" title="いずれか選択してください" >
+            <input id="ch4" type="checkbox" name="know[]" value="k4" title="いずれか選択してください" checked="checked">
             <label for="ch4">その他</label></td>
             <?php
             if(isset($_POST['know[]'])){
@@ -88,12 +89,13 @@
             </textarea></td></tr><br>
         </div>
     </table>
-<div align="center">
-    <input id="reset" type="reset" >
-    <input id="submit" type="submit" >
-
-</div>
 </body>
 <footer>
+    <div align="center">
+        <input id="reset" type="reset" >
+        <input id="submit" type="submit" >
+
+    </div>
+
 </footer>
 </form>

@@ -62,7 +62,7 @@
 
                 }else{
                     $know=$_POST["know"];
-                    $check=array("k1"=>"雑誌","k2"=>"新聞","k3"=>"テレビ","k4"=>"その他");
+                    $check=array("k1"=>"紙面","k2"=>"SNS","k3"=>"テレビ","k4"=>"その他");
                     foreach ($know as $value) {
                         echo $select_know = $check[$value]." ";
                     }
@@ -94,6 +94,10 @@
         </tr></div>
     </table>
 </body>
+<footer>
+    <div align="center">
+        <input type="button" id="botton" value="戻る" onClick="history.back()">
+</footer>
 </html>
 <?php
 $fp = fopen("contact_log.txt","a");
@@ -102,7 +106,7 @@ fwrite($fp,"性別：$gender"."\r\n");
 fwrite($fp,"住所：$resi"."\r\n");
 fwrite($fp,"電話番号：$tel"."\r\n");
 fwrite($fp,"アドレス：$add"."\r\n");
-fwrite($fp,"どこで知ったのか：$select_know"."\r\n");
+fwrite($fp,"どこで知ったのか：isset($select_know)"."\r\n");
 fwrite($fp,"質問のカテゴリ：$cate"."\r\n");
 fwrite($fp,"質問内容：$coments"."\r\n");
 fwrite($fp,"\r\n");

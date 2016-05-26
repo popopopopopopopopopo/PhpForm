@@ -7,7 +7,8 @@ header{
     text-shadow:2px 2px 1px gray;
 }
 body{
-    background-image: url("ignasi_pattern_s.png");
+    background-image: url("ignasi_pattern_s.png") ;
+    background-attachment: fixed;
     float: center;
     margin: auto;
     border: 3px;
@@ -29,7 +30,7 @@ textarea{
     width: 80%;
     margin: 0 5em;
 }
-input#submit,#reset{
+input#submit,#reset,#botton{
     width: 100px;
     height: 50px;
     background-color: #2f4f4f;
