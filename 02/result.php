@@ -6,6 +6,7 @@
     <h1>○●○ お問合せ完了 ○●○</h1>
 </header>
 <body>
+    <!---テーブルの表：中央寄せ、線の太さ１、巣是手の内羅線、外枠線非表示-->
     <table align="center" border="1" rules="all" frame="void">
 
         <div><tr>
@@ -57,12 +58,14 @@
         <div><tr>
             <td>どこで知ったのか</td>
             <td><?php
+                //空の場合
                 if(empty($_POST["know"])){
                     echo "選択してください";
 
                 }else{
                     $know=$_POST["know"];
-                    $check=array("k1"=>"雑誌","k2"=>"新聞","k3"=>"テレビ","k4"=>"その他");
+                    $check=array("k1"=>"紙面","k2"=>"SNS","k3"=>"テレビ","k4"=>"その他");
+                    //foreachで複数選択されたら、複数表示
                     foreach ($know as $value) {
                         echo $select_know = $check[$value]." ";
                     }
@@ -88,13 +91,26 @@
             <td colspan="2"><fieldset align="center" col="50" >
                 <?php
                 $coments = $_POST['coments'];
+                //枠組みがほしかったので...nl2br...
                 echo nl2br($coments."<br>"); ?>
                 </fieldset>
             </td>
         </tr></div>
     </table>
 </body>
+<footer>
+    <div align="center">
+        <!--前のページに戻る--------->
+        <input type="button" id="reset" value="戻る" onClick="history.back()">
+    </div>
+    <p class="img">
+
+        <img src="figure_tousenbo.png" align="right" width="80px" height="80px" transform="rotateX(180)">
+
+    </p>
+</footer>
 </html>
+<!--テキストファイルに追記---------------->
 <?php
 $fp = fopen("contact_log.txt","a");
 fwrite($fp,"姓名：$name"."\r\n");

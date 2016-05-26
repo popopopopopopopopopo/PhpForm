@@ -4,10 +4,11 @@ header{
     padding: 1em;
     border-bottom:solid 2px gray;
     color: #2f4f4f;
-    text-shadow:2px 2px 1px gray;
 }
 body{
-    background-image: url("ignasi_pattern_s.png");
+    background-image: url("ignasi_pattern_s.png") ;
+    background-attachment: fixed;
+    font-family: Segoe Print;
     float: center;
     margin: auto;
     border: 3px;
@@ -17,7 +18,7 @@ table{
     border: hidden;
     width: 50em;
     height: 60%;
-    font-weight: bold;
+    font-weight: 500;
     }
 tr,td{
     border :1px dotted gray;
@@ -29,18 +30,62 @@ textarea{
     width: 80%;
     margin: 0 5em;
 }
-input#submit,#reset{
+
+input#submit,#reset,#botton{
+    cursor: pointer;
     width: 100px;
     height: 50px;
-    background-color: #2f4f4f;
+    background-color: #69b3b3;
     color: #fff;
     border-style: none;
     font-weight: bold;
     margin: 1em 3em;
-    border-radius: 5px
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 6px 0 #047c71, 0 12px 0  #2f4f4f;
+  -webkit-transition: color 0.3s, background-color 0.3s, box-shadow 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+input#submit:hover,#reset:hover,#botton:hover {
+  background-color:  #69b3b3;
+  box-shadow: 0 3px 0 #12978d, 0 6px 0px  #5a9999;
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
+input#submit:hover,#reset:hover,#botton:active {
+  color:#5a9999;
+  background-color: #69b3b3;
+  box-shadow: 0 0 0 #047c71, 0 0 0px #5a9999;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  transition-duration: 0.1s;
 }
 span{
-    color: red;
+    color: #ff6347;
     float: right;
     box-shadow: 10px 10px　red;
+}
+
+@-webkit-keyframes jump {
+  0% { -webkit-transform: translateY(0); }
+  100% { -webkit-transform: translateY(-20px); }
+}
+
+@keyframes jump {
+ 0% { transform: translateY(0); }
+ 100% { transform: translateY(-20px); }
+}
+
+.img {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-cnount:infinite;
+    -webkit-transform-origin:middle center;
+    -webkit-animation-name:animation;
+    position: relative;
+    -webkit-animation: jump .3s infinite alternate;
+    animation: jump .3s infinite alternate;
+    margin: 0;
 }
