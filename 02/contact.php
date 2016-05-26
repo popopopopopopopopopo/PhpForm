@@ -11,13 +11,13 @@
 
         <div >
             <tr><td>姓<span>(必須)</span></td>
-            <td><input  type="text" name="sei" size="15" maxlength="40" class="input-text" placeholder="例)山田" required /></td>
+            <td><input  type="text" name="sei" size="15" maxlength="40" class="input-text" placeholder="山田" required /></td>
             </tr>
         </div>
 
         <div >
             <tr><td>名<span>(必須)</span></td>
-            <td><input  type="textbox" name="mei" size="15" maxlength="40" class="input-text" placeholder="例)太郎" required /></td>
+            <td><input  type="textbox" name="mei" size="15" maxlength="40" class="input-text" placeholder="太郎" required /></td>
             </tr>
         </div>
 
@@ -34,13 +34,13 @@
 
         <div >
             <tr><td>住所<span>(必須)</span></td>
-            <td><input type="textbox" name="residence" size="40" placeholder="例)東京都○○" required /></td>
+            <td><input type="textbox" name="residence" size="40" placeholder="東京都○○" required /></td>
             </tr>
         </div>
 
         <div >
             <tr><td>電話番号<span>(必須)</span></td>
-            <td><input type="textbox" name="tel1" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="例)123" required />-
+            <td><input type="textbox" name="tel1" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="123" required />-
             <input type="textbox" name="tel2" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="456" required />-
             <input type="textbox" name="tel3" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="789" required /></td>
             </tr>
@@ -54,7 +54,7 @@
         </div>
 
         <div >
-            <tr><td>どこでご覧になりましたか</td>
+            <tr><td>どこでご知りましたか</td>
 
             <td><input id="ch1" type="checkbox" name="know[]" value="k1" title="いずれか選択してください"　>
             <label for="ch1">紙面</label>
@@ -85,7 +85,7 @@
             <td colspan="2">お問合せ内容</td>
             </tr><br>
             <tr><td colspan="2">
-            <textarea  name="coments" col="50" rows="5" value="" />
+            <textarea  name="coments" col="50" rows="5"　value="" />
             </textarea></td></tr><br>
         </div>
     </table>
@@ -96,6 +96,7 @@
         <input id="submit" type="submit" >
 
     </div>
+    <img src="figure_ta-da.png" align="left" width="80px" height="80px">
 
 </footer>
 </form>

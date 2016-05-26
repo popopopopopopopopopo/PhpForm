@@ -4,11 +4,11 @@ header{
     padding: 1em;
     border-bottom:solid 2px gray;
     color: #2f4f4f;
-    text-shadow:2px 2px 1px gray;
 }
 body{
     background-image: url("ignasi_pattern_s.png") ;
     background-attachment: fixed;
+    font-family: Segoe Print;
     float: center;
     margin: auto;
     border: 3px;
@@ -18,7 +18,7 @@ table{
     border: hidden;
     width: 50em;
     height: 60%;
-    font-weight: bold;
+    font-weight: 500;
     }
 tr,td{
     border :1px dotted gray;
@@ -30,18 +30,50 @@ textarea{
     width: 80%;
     margin: 0 5em;
 }
+
 input#submit,#reset,#botton{
+    cursor: pointer;
     width: 100px;
     height: 50px;
-    background-color: #2f4f4f;
+    background-color: #69b3b3;
     color: #fff;
     border-style: none;
     font-weight: bold;
     margin: 1em 3em;
-    border-radius: 5px
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 6px 0 #047c71, 0 12px 0  #2f4f4f;
+  -webkit-transition: color 0.3s, background-color 0.3s, box-shadow 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+input#submit:hover,#reset:hover,#botton:hover {
+  background-color:  #69b3b3;
+  box-shadow: 0 3px 0 #12978d, 0 6px 0px  #5a9999;
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
+input#submit:hover,#reset:hover,#botton:active {
+  color:#5a9999;
+  background-color: #69b3b3;
+  box-shadow: 0 0 0 #047c71, 0 0 0px #5a9999;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  transition-duration: 0.1s;
 }
 span{
-    color: red;
+    color: #ff6347;
     float: right;
     box-shadow: 10px 10px　red;
+}
+.img {
+    -webkit -animation: bound .5s ease-in-out;
+}
+@-webkit-keyframes bound{
+    0% {transform: scale(0) translate(0,-500px);}
+    50% {transform: scaleX(2) translate(0,200px);}
+    70% {transform: scaleY(.5) translate(0,-100px);}
+    90% {transform: scaleX(1.5) translate(0,50px);}
+    100% {transform: scale(1) translate(0,0);}
 }
