@@ -67,13 +67,25 @@ span{
     float: right;
     box-shadow: 10px 10px　red;
 }
-.img {
-    -webkit -animation: bound .5s ease-in-out;
+
+@-webkit-keyframes jump {
+  0% { -webkit-transform: translateY(0); }
+  100% { -webkit-transform: translateY(-20px); }
 }
-@-webkit-keyframes bound{
-    0% {transform: scale(0) translate(0,-500px);}
-    50% {transform: scaleX(2) translate(0,200px);}
-    70% {transform: scaleY(.5) translate(0,-100px);}
-    90% {transform: scaleX(1.5) translate(0,50px);}
-    100% {transform: scale(1) translate(0,0);}
+
+@keyframes jump {
+ 0% { transform: translateY(0); }
+ 100% { transform: translateY(-20px); }
+}
+
+.img {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-cnount:infinite;
+    -webkit-transform-origin:middle center;
+    -webkit-animation-name:animation;
+    position: relative;
+    -webkit-animation: jump .3s infinite alternate;
+    animation: jump .3s infinite alternate;
+    margin: 0;
 }

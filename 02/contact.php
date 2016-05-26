@@ -96,7 +96,10 @@
         <input id="submit" type="submit" >
 
     </div>
-    <img src="figure_ta-da.png" align="left" width="80px" height="80px">
+    <p class="img">
 
+        <img src="figure_ta-da.png" align="left" width="80px" height="80px">
+
+    </p>
 </footer>
 </form>
