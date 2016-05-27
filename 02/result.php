@@ -55,12 +55,8 @@
                     if(is_numeric($_POST["tel2"])  && is_numeric($_POST["tel3"]) ){
                         echo $tel = $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3'];
                     }else{
-<<<<<<< HEAD
                         echo "半角数字で入力しなおしてください";
                         $tel = null
-=======
-                         echo "半角数字で入力しなおしてください";
->>>>>>> 0527
                     }
                 }?>
             </td>
@@ -114,11 +110,7 @@
             <td colspan="2"><fieldset align="center" col="50" >
                 <?php
                 $coments = $_POST['coments'];
-<<<<<<< HEAD
                 //改行文字の前にHTMLの改行タグを挿入.
-=======
-                //改行文字の前にHTMLの改行タグを挿入する
->>>>>>> 0527
                 echo nl2br($coments."<br>"); ?>
                 </fieldset>
             </td>
