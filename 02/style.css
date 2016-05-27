@@ -1,6 +1,7 @@
 header{
     text-align: center;
     background-image: url("ignasi_pattern_s.png");
+    background-attachment: fixed;    
     padding: 1em;
     border-bottom:solid 2px gray;
     color: #2f4f4f;
