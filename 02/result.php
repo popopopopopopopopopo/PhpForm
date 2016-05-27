@@ -106,7 +106,7 @@
             <td colspan="2"><fieldset align="center" col="50" >
                 <?php
                 $coments = $_POST['coments'];
-                //枠組みがほしかったので...nl2br...
+                //改行文字の前にHTMLの改行タグを挿入する
                 echo nl2br($coments."<br>"); ?>
                 </fieldset>
             </td>
