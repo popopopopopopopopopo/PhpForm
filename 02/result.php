@@ -50,12 +50,10 @@
         <div><tr>
             <td>電話番号</td>
             <td><?php
-                if(isset($_POST["tel1"]) == false && isset($_POST["tel2"]) == false){
-                    if(isset($_POST["tel2"]) == false && isset($_POST["tel3"]) == false){
-                        echo "入力しなおしてください";
-                    }
-                }else{
-                    echo $tel = $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3'];
+                if(is_numeric($_POST["tel1"]) && is_numeric($_POST["tel2"]) ){
+                    if(is_numeric($_POST["tel2"])  && is_numeric($_POST["tel3"]) ){
+                        echo $tel = $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3'];
+                    }echo "半角数字で入力しなおしてください";
                 } ?>
             </td>
         </tr></div>

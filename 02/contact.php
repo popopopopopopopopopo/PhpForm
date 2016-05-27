@@ -5,9 +5,12 @@
 </header>
 
 <body>
+
 <form action="result.php" method="POST"  autocomplete="off" >
-    <!---テーブルの表：中央寄せ、線の太さ１、巣是手の内羅線、外枠線非表示-->
+<!---autocomplete="off"で入力する際の自動補完をオフ------------->
+
     <table align="center" border="1" rules="all" frame="void">
+    <!---テーブルの表：中央寄せ、線の太さ１、巣是手の内羅線、外枠線非表示-->
 
         <div >
             <tr><td>姓<span>(必須)</span></td>
