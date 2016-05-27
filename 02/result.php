@@ -12,16 +12,21 @@
         <div><tr>
             <td>姓名</td>
             <td><?php
-                echo $name=$_POST['sei']." ".$_POST['mei'];
-                ?>
+                if(isset($_POST["sei"]) == false && isset($_POST["mei"]) == false ){
+                    echo "入力しなおしてください";
+                }else{
+                    echo $name=$_POST['sei']." ".$_POST['mei'];
+                } ?>
             </td>
         </tr></div>
 
         <div><tr>
             <td>性別</td>
             <td><?php
-                $gender=$_POST["gender"];
-                if($gender === "g1"){
+                $gender=$_POST['gender'];
+                if($gender ===""){
+                    echo "入力しなおしてください";
+                }elseif($gender === "g1"){
                     echo $gender = "男性";
                 }elseif($gender === "g2"){
                     echo $gender = "女性";
@@ -34,24 +39,35 @@
         <div><tr>
             <td>住所</td>
             <td><?php
-                echo $resi = $_POST['residence'];
-                ?>
+                if(isset($_POST["residence"]) == false){
+                    echo "入力しなおしてください";
+                }else{
+                    echo $resi = $_POST['residence'];
+                } ?>
             </td>
         </tr></div>
 
         <div><tr>
             <td>電話番号</td>
             <td><?php
-                echo $tel = $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3'];
-                ?>
+                if(isset($_POST["tel1"]) == false && isset($_POST["tel2"]) == false){
+                    if(isset($_POST["tel2"]) == false && isset($_POST["tel3"]) == false){
+                        echo "入力しなおしてください";
+                    }
+                }else{
+                    echo $tel = $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3'];
+                } ?>
             </td>
         </tr></div>
 
         <div><tr>
             <td>アドレス</td>
             <td><?php
-                echo $add = $_POST['ad1']."@".$_POST['ad2'];
-                ?>
+                if(isset($_POST["ad1"]) == false && isset($_POST["ad2"]) == false){
+                    echo "入力しなおしてください";
+                }else{
+                    echo $add = $_POST['ad1']."@".$_POST['ad2'];
+                } ?>
             </td>
         </tr></div>
 
@@ -61,7 +77,6 @@
                 //空の場合
                 if(empty($_POST["know"])){
                     echo "選択してください";
-
                 }else{
                     $know=$_POST["know"];
                     $check=array("k1"=>"紙面","k2"=>"SNS","k3"=>"テレビ","k4"=>"その他");
@@ -80,6 +95,8 @@
                     echo $cate = "質問・お問合せ";
                 }elseif($_POST["category"] === "2"){
                     echo $cate = "その他";
+                }else{
+                    echo "選択しなおしてください";
                 } ?>
             </td>
         </tr></div>
@@ -104,9 +121,7 @@
         <input type="button" id="reset" value="戻る" onClick="history.back()">
     </div>
     <p class="img">
-
         <img src="figure_tousenbo.png" align="right" width="80px" height="80px" transform="rotateX(180)">
-
     </p>
 </footer>
 </html>
@@ -122,5 +137,4 @@ fwrite($fp,"どこで知ったのか：$select_know"."\r\n");
 fwrite($fp,"質問のカテゴリ：$cate"."\r\n");
 fwrite($fp,"質問内容：$coments"."\r\n");
 fwrite($fp,"\r\n");
-
 fclose($fp); ?>
