@@ -86,7 +86,8 @@
             <td colspan="2">お問合せ内容</td>
             </tr><br>
             <tr><td colspan="2">
-            <textarea  name="coments" col="50" rows="5"　value="" /><!--colで横幅、rowsｓで縦幅指定------->
+                <!--colで横幅、rowsｓで縦幅指定------->
+            <textarea  name="coments" col="50" rows="5"　value="" />
             </textarea></td></tr><br>
         </div>
     </table>
