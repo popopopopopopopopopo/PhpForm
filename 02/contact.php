@@ -5,9 +5,12 @@
 </header>
 
 <body>
+
 <form action="result.php" method="POST"  autocomplete="off" >
-    <!---テーブルの表：中央寄せ、線の太さ１、巣是手の内羅線、外枠線非表示-->
+<!---autocomplete="off"で入力する際の自動補完をオフ------------->
+
     <table align="center" border="1" rules="all" frame="void">
+    <!---テーブルの表：中央寄せ、線の太さ１、巣是手の内羅線、外枠線非表示-->
 
         <div >
             <tr><td>姓<span>(必須)</span></td>
@@ -25,11 +28,11 @@
         <div >
             <tr><td>性別<span>(必須)</span></td>
             <!--id、ラジオボタン、名前、値、必須入力------------>
-            <td><input id="rd1" type="radio" name="gender"value="g1" required="true"　/>
+            <td><input id="rd1" type="radio" name="gender" value="g1" required="true"　checked/>
             <label for="rd1" class="error">男性</label>
-            <input id="rd2" type="radio" name="gender"value="g2" />
+            <input id="rd2" type="radio" name="gender" value="g2" />
             <label for="rd2" class="error">女性</label>
-            <input id="rd3" type="radio" name="gender"value="g3" />
+            <input id="rd3" type="radio" name="gender" value="g3" />
             <label for="rd3" class="error">不明</label></td>
             </tr>
         </div>
@@ -43,7 +46,7 @@
         <div >
             <tr><td>電話番号<span>(必須)</span></td>
             <!--okeyupで入力文字制限(半角数字のみ)--------->
-            <td><input type="textbox" name="tel1" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="123" required />-
+            <td><input type="textbox" name="tel1" size="3" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="123" required />-
             <input type="textbox" name="tel2" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="456" required />-
             <input type="textbox" name="tel3" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="789" required /></td>
             </tr>
