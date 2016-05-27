@@ -1,4 +1,3 @@
-
 <html>
 <header>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -6,9 +5,9 @@
     <h1>○●○ お問合せ完了 ○●○</h1>
 </header>
 <body>
-    <!---テーブルの表：中央寄せ、線の太さ１、巣是手の内羅線、外枠線非表示-->
+    <!--テーブルの表：中央寄せ、線の太さ１、巣是手の内羅線、外枠線非表示-->
     <table align="center" border="1" rules="all" frame="void">
-
+<!--姓名-->
         <div><tr>
             <td>姓名</td>
             <td><?php
@@ -19,7 +18,7 @@
                 } ?>
             </td>
         </tr></div>
-
+<!--性別-->
         <div><tr>
             <td>性別</td>
             <td><?php
@@ -35,32 +34,38 @@
                 } ?>
             </td>
         </tr></div>
-
+<!--住所-->
         <div><tr>
             <td>住所</td>
             <td><?php
                 if(isset($_POST["residence"]) == false){
                     echo "入力しなおしてください";
+                    $resi=null;
                 }else{
                     echo $resi = $_POST['residence'];
                 } ?>
             </td>
         </tr></div>
-
+<!--電話番号-->
         <div><tr>
             <td>電話番号</td>
             <td><?php
+                //万が一コピペで文字を挿入されたときのエラー表示
                 if(is_numeric($_POST["tel1"]) && is_numeric($_POST["tel2"]) ){
                     if(is_numeric($_POST["tel2"])  && is_numeric($_POST["tel3"]) ){
                         echo $tel = $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3'];
                     }else{
+<<<<<<< HEAD
                         echo "半角数字で入力しなおしてください";
                         $tel = null
+=======
+                         echo "半角数字で入力しなおしてください";
+>>>>>>> 0527
                     }
                 }?>
             </td>
         </tr></div>
-
+<!--アドレス-->
         <div><tr>
             <td>アドレス</td>
             <td><?php
@@ -71,7 +76,7 @@
                 } ?>
             </td>
         </tr></div>
-
+<!--どこで知ったか-->
         <div><tr>
             <td>どこで知ったのか</td>
             <td><?php
@@ -88,9 +93,9 @@
                 } ?>
             </td>
         </tr></div>
-
+<!--お問合せのカテゴリ-->
         <div><tr>
-            <td>質問のカテゴリ</td>
+            <td>お問合せのカテゴリ</td>
             <td><?php
                 if($_POST["category"] === "1"){
                     echo $cate = "質問・お問合せ";
@@ -101,15 +106,19 @@
                 } ?>
             </td>
         </tr></div>
-
+<!--お問合せ内容-->
         <div><tr>
-            <td colspan="2">質問内容</td>
+            <td colspan="2">お問合せ内容</td>
         </tr>
         <tr>
             <td colspan="2"><fieldset align="center" col="50" >
                 <?php
                 $coments = $_POST['coments'];
+<<<<<<< HEAD
                 //改行文字の前にHTMLの改行タグを挿入.
+=======
+                //改行文字の前にHTMLの改行タグを挿入する
+>>>>>>> 0527
                 echo nl2br($coments."<br>"); ?>
                 </fieldset>
             </td>
@@ -117,16 +126,17 @@
     </table>
 </body>
 <footer>
+    <!--1つ前のページに戻るボタン-->
     <div align="center">
-        <!--前のページに戻る--------->
         <input type="button" id="reset" value="戻る" onClick="history.back()">
     </div>
+    <!--画像挿入-->
     <p class="img">
-        <img src="figure_tousenbo.png" align="right" width="80px" height="80px" transform="rotateX(180)">
+        <img src="figure_tousenbo.png" align="right" width="80px" height="80px" >
     </p>
 </footer>
 </html>
-<!--テキストファイルに追記---------------->
+<!--テキストファイルに追記、"\r\n"で改行-->
 <?php
 $fp = fopen("contact_log.txt","a");
 fwrite($fp,"姓名：$name"."\r\n");
