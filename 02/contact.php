@@ -28,7 +28,7 @@
         <div >
             <tr><td>性別<span>(必須)</span></td>
             <!--id、ラジオボタン、名前、値、必須入力------------>
-            <td><input id="rd1" type="radio" name="gender" value="g1" required="true"　checked/>
+            <td><input id="rd1" type="radio" name="gender" value="g1" required="true"　/>
             <label for="rd1" class="error">男性</label>
             <input id="rd2" type="radio" name="gender" value="g2" />
             <label for="rd2" class="error">女性</label>
@@ -46,14 +46,16 @@
         <div >
             <tr><td>電話番号<span>(必須)</span></td>
             <!--okeyupで入力文字制限(半角数字のみ)--------->
-            <td><input type="textbox" name="tel1" size="3" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="123" required />-
-            <input type="textbox" name="tel2" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="456" required />-
-            <input type="textbox" name="tel3" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" placeholder="789" required /></td>
+            <td><input type="textbox" name="tel1" size="3" maxlength="3" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" pattern="^[0-9]+$" placeholder="123" required />-
+            <input type="textbox" name="tel2" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" pattern="^[0-9]+$" placeholder="456" required />-
+            <input type="textbox" name="tel3" size="3" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" pattern="^[0-9]+$" placeholder="789" required />
+            </td>
             </tr>
         </div>
 
         <div >
             <tr><td>アドレス<span>(必須)</span></td>
+            <!--okeyupで入力文字制限(半角英数字、@以下は"example.com"のようにドットを加えた形に指定)--------->
             <td><input type="textbox" name="ad1" size="24" onKeyup="this.value=this.value.replace(/[^0-9a-z]+/,'')" placeholder="abcd" required />@
                 <input type="textbox" name="ad2" size="10" onKeyup="this.value=this.value.replace(/[^0-9a-z]+\.[a-z]{2,3}$/,'')" pattern="[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="example.com" required /></td>
             </tr>
@@ -89,9 +91,9 @@
             <td colspan="2">お問合せ内容</td>
             </tr><br>
             <tr><td colspan="2">
-                <!--colで横幅、rowsｓで縦幅指定------->
-            <textarea  name="coments" col="50" rows="5"　value="" />
-            </textarea></td></tr><br>
+            <!--colで横幅、rowsｓで縦幅指定------->
+                <textarea  name="coments" col="50" rows="5"　value="" /></textarea>
+            </td></tr><br>
         </div>
     </table>
 </body>
@@ -99,10 +101,9 @@
     <div align="center">
         <input id="reset" type="reset" >
         <input id="submit" type="submit" >
-
     </div>
     <p class="img">
-
+        <!--画像の挿入---------------->
         <img src="figure_ta-da.png" align="left" width="80px" height="80px">
 
     </p>

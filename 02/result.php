@@ -41,6 +41,7 @@
             <td><?php
                 if(isset($_POST["residence"]) == false){
                     echo "入力しなおしてください";
+                    $resi=null;
                 }else{
                     echo $resi = $_POST['residence'];
                 } ?>
@@ -50,11 +51,15 @@
         <div><tr>
             <td>電話番号</td>
             <td><?php
+                //万が一コピペで文字を挿入されたときのエラー表示
                 if(is_numeric($_POST["tel1"]) && is_numeric($_POST["tel2"]) ){
                     if(is_numeric($_POST["tel2"])  && is_numeric($_POST["tel3"]) ){
                         echo $tel = $_POST['tel1']."-".$_POST['tel2']."-".$_POST['tel3'];
-                    }echo "半角数字で入力しなおしてください";
-                } ?>
+                    }else{
+                         echo "半角数字で入力しなおしてください";
+                         $tel = null;
+                    }
+                }?>
             </td>
         </tr></div>
 
@@ -63,6 +68,7 @@
             <td><?php
                 if(isset($_POST["ad1"]) == false && isset($_POST["ad2"]) == false){
                     echo "入力しなおしてください";
+                    $add=null;
                 }else{
                     echo $add = $_POST['ad1']."@".$_POST['ad2'];
                 } ?>
